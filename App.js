@@ -8,7 +8,7 @@ import Header from './src/components/header';
 const App = () => {
   return(
     <View>
-      <Header/>
+      <Header headerText={'Albums!'}/>
       <Text>Some text</Text>
     </View>
   );
