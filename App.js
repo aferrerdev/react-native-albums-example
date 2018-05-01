@@ -4,12 +4,13 @@ import { View, Text } from 'react-native';
 
 // Import custom components
 import Header from './src/components/header';
+import AlbumList from './src/components/album-list';
 
 const App = () => {
   return(
     <View>
-      <Header headerText={'Albums!'}/>
-      <Text>Some text</Text>
+      <Header headerText={'Albums!'} />
+      <AlbumList />
     </View>
   );
 };
