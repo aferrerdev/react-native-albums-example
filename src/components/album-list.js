@@ -18,15 +18,20 @@ export default class AlbumList extends Component {
                 this.setState({
                     albums: response.data
                  });
+                 console.log(response.data);
             }, (error) => {
                 console.log(error);
             });
     }
 
+    renderAlbums() {
+        return this.state.albums.map(album => <Text>{album.title}</Text>);
+    }
+
     render() {
         return (
             <View>
-                <Text>Album List</Text>
+                {this.renderAlbums()}
             </View>
         );
     }
