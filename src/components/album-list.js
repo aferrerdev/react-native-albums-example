@@ -4,14 +4,22 @@ import axios from 'axios';
 
 export default class AlbumList extends Component {
 
+    // Initialize component state
+    state = {
+        albums: []
+    };
+
     componentWillMount() {
         console.log('componentWillMount in AlbumList');
         // Do HTTP Request
         axios.get('https://rallycoding.herokuapp.com/api/music_albums')
             .then((response) => {
-                console.log(response);
-            }, () => {
-
+                // Set new state.
+                this.setState({
+                    albums: response.data
+                 });
+            }, (error) => {
+                console.log(error);
             });
     }
 
