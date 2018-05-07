@@ -25,10 +25,17 @@ export default class AlbumList extends Component {
             });
     }
 
+    /**
+     * This method will render a AlbumDetail component for each album in
+     * albums array in the state.
+     */
     renderAlbums() {
         return this.state.albums.map(album => <AlbumDetail key={album.title} album={album}></AlbumDetail>);
     }
 
+    /**
+     * Render View
+     */
     render() {
         return (
             <View>
