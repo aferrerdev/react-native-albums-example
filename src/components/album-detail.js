@@ -21,9 +21,11 @@ export default class AlbumDetail extends Component {
                         <Text>{this.props.album.artist}</Text>
                     </View>    
                 </CardSection>
+
                 <CardSection>
                     <Image style={styles.imageStyle} source={{ uri: this.props.album.image }} />
                 </CardSection>
+                
                 <CardSection>
                     <Button />
                 </CardSection>    
