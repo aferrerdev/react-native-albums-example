@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import axios from 'axios';
 import Card from './card';
 import CardSection from './card-section';
@@ -25,9 +25,11 @@ export default class AlbumDetail extends Component {
                 <CardSection>
                     <Image style={styles.imageStyle} source={{ uri: this.props.album.image }} />
                 </CardSection>
-                
+
                 <CardSection>
-                    <Button />
+                    <Button onPress={() => Linking.openURL(this.props.album.url) } >
+                        Buy now
+                    </Button>
                 </CardSection>    
             </Card>
         );
