@@ -3,6 +3,7 @@ import { Text, View, Image } from 'react-native';
 import axios from 'axios';
 import Card from './card';
 import CardSection from './card-section';
+import Button from './button';
 
 export default class AlbumDetail extends Component {
     render() {
@@ -23,6 +24,9 @@ export default class AlbumDetail extends Component {
                 <CardSection>
                     <Image style={styles.imageStyle} source={{ uri: this.props.album.image }} />
                 </CardSection>
+                <CardSection>
+                    <Button />
+                </CardSection>    
             </Card>
         );
     }
